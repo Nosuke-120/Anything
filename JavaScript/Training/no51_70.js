@@ -5,9 +5,18 @@
 let fafa = [['one', 'info@fa'],['two', 'send@fafa'],['three', 'hoso@fafa']];
 // イテレータを作る　（値を１つずつ取り出すことができるデータ）
 // next()メソッドを持ち、既存メソッドであるentrieis()で作成できる
+// 「順番にデータが発生する」という状況を表すのにイテレータは向いています。
 
 let entries = fafa.entries();
 for (let entry of entries) {
   console.log(entry);
 }
+
+// 問52
+// 'morita kenji'のような1つ以上の小英字、半角スペース、1つ以上の小英字にマッチした場合、配列['morita kenji']が返るようにしてください。
+// exec() メソッドは、指定された文字列内で一致するものの検索を実行します。結果の配列、または null を返します
+/\w+\s+\w/.exec('morita kenji') //例1
+let pattern = /\w+\s+\w/;
+result = 'morita kenji'.match(pattern);
+console.log(result);
 

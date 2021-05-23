@@ -16,7 +16,15 @@ for (let entry of entries) {
 // 'morita kenji'のような1つ以上の小英字、半角スペース、1つ以上の小英字にマッチした場合、配列['morita kenji']が返るようにしてください。
 // exec() メソッドは、指定された文字列内で一致するものの検索を実行します。結果の配列、または null を返します
 /\w+\s+\w/.exec('morita kenji') //例1
-let pattern = /\w+\s+\w/;
+let pattern = /\w+\s+\w/; //例2
 result = 'morita kenji'.match(pattern);
 console.log(result);
 
+// 問53
+// このような 'It is an important problem'と'The import duty is not cheap'の文字列内importにマッチするとbooleanを返す記述をしてください
+const str1 = 'It is an important problem';
+const str2 = 'The import duty is not cheap';
+let isImport = /.*\bimport\b.*/.test(str1); //test()はbooleanを返す
+isImportant //false
+let isImport = /.*\bimport\b.*/.test(str2);
+isImportant //true

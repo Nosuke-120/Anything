@@ -26,5 +26,13 @@ const str1 = 'It is an important problem';
 const str2 = 'The import duty is not cheap';
 let isImport = /.*\bimport\b.*/.test(str1); //test()はbooleanを返す
 isImportant //false
-let isImport = /.*\bimport\b.*/.test(str2);
+let isImport = /.*\bimport\b.*/.test(str2); // 単語の境界線は\b
 isImportant //true
+
+// 問54
+// ひらがな全てにマッチ、半角カタカナ全てにマッチ、カタカナ全てにマッチする正規表現を記述してください
+// ひらがな→　[あ-ん]
+// 半角カタカナ→　[/^[\uFF65-\uFF9F]+$/]
+// 半角→　/[^A-Za-z0-9]/
+
+

@@ -50,3 +50,27 @@ const str = '彼はありがとうと言った';
 // 「When」、「Where」、「Who」、「What」、「Why」、「How」の単語のみにマッチする正規表現を書きなさい
 const str = 'How';
 /wh(en|ere|o|at|y|)|How/.exec(str);
+
+// 問58
+// x = new Boolean(false)    if文の式として渡すと実行されるか答えなさい
+x = new Boolean(false);
+if (x) {
+  // 実行される
+  // undefinedやnull以外のオブジェクトは実行
+}
+
+// 真偽値でない値を真偽値に変換したいのであればnew演算子をBoolean()に値を渡す
+// Boolean()はプリミティブ値のtrueもしくはfalseを返す
+// 以下は全てfalse
+console.log(Boolean(0));
+console.log(Boolean(-0));
+console.log(Boolean(false));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+
+// 以下は全てtrue
+console.log(Boolean(1789));
+console.log(Boolean('false'));
+console.log(Boolean(Math));
+console.log(Boolean(Array()));

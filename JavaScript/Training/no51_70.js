@@ -74,3 +74,15 @@ console.log(Boolean(1789));
 console.log(Boolean('false'));
 console.log(Boolean(Math));
 console.log(Boolean(Array()));
+
+// No59
+//myFalse = new Boolean(false);
+g = new Boolean(myFalse);
+g //true
+//Boolean オブジェクトの初期値としてオブジェクトを指定した場合、それが値が false の Boolean オブジェクトであっても
+//新しい Boolean オブジェクトは true の値を持ちます
+
+// No60
+if (undefined == null){
+  //実行される
+}

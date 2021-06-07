@@ -75,14 +75,27 @@ console.log(Boolean('false'));
 console.log(Boolean(Math));
 console.log(Boolean(Array()));
 
-// No59
+// 問59
 //myFalse = new Boolean(false);
 g = new Boolean(myFalse);
 g //true
 //Boolean オブジェクトの初期値としてオブジェクトを指定した場合、それが値が false の Boolean オブジェクトであっても
 //新しい Boolean オブジェクトは true の値を持ちます
 
-// No60
+// 問60
 if (undefined == null){
   //実行される
 }
+
+// 問61
+// 関数iiを実行すると返り値で関数を受け取り、その関数に引数'home'を渡し実行すると'my home'と返ってくるクロージャーを作ってください
+const ii = () => {
+  let pp = 'my ';
+  return function(value) {
+     console.log(pp + value);
+  }
+}
+let kk = ii();
+kk('home');
+// my home
+

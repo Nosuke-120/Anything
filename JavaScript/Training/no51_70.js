@@ -45,3 +45,8 @@ const str = '彼はありがとうと言った';
 const str = '彼はありがとうと言った';
 /彼はありがとう|こんにちは | さよならと言った/.exec(str);
 //['彼はありがとう']
+
+// 問57
+// 「When」、「Where」、「Who」、「What」、「Why」、「How」の単語のみにマッチする正規表現を書きなさい
+const str = 'How';
+/wh(en|ere|o|at|y|)|How/.exec(str);

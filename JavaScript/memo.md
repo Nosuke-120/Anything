@@ -34,4 +34,22 @@ void 0は何を返すのか
 `localStorage.setItem("key","value");`
 - ストレージにデータを保存する処理は同期処理なので、非同期で処理したい場合は非同期処理へ変換する必要がある（＝ これをPromise化と言う）
 
+## Promiseのメリットとは
+コールバック地獄を回避できる
+
+- Promisenなし
+```
+setTimeout(function() {
+  console.log('2秒経ったよ');
+  setTimeout(function() {
+    console.log('1.5秒経ったよ');
+    setTimeout(function() {
+      console.log('3秒経ったよ');
+      setTimeout(function() {
+        console.log('1秒経ったよ');
+      }, 1000)
+    }, 3000)
+  }, 1500)
+}, 2000)
+```
 

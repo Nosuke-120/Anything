@@ -33,3 +33,5 @@ MVVMはRailsなどのMVCと近いので、Railsなどが人気な日本では採
 - anyenvを経由してインストールことでrbenvやpyenvなどの他の言語もまとめて管理できる。設定も共通化できる。
 - `anyenv install nodenv`
 
+<b></b>
+

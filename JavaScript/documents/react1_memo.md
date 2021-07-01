@@ -33,5 +33,17 @@ MVVMはRailsなどのMVCと近いので、Railsなどが人気な日本では採
 - anyenvを経由してインストールことでrbenvやpyenvなどの他の言語もまとめて管理できる。設定も共通化できる。
 - `anyenv install nodenv`
 
-<b></b>
-
+<b>ブラウザに実際に返されてるHTMLのソースコード</b>
+```
+︙
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script src="/static/js/bundle.js"></script>
+  <script src="/static/js/0.chunk.js"></script>
+  <script src="/static/js/main.chunk.js"></script>
+</body>
+</html>
+```
+- main.chunk.jsはレガシーな JavaScript にコンパイルされたアプリの中身
+- CRA で作成したプロジェクトでは、上記のようにソースコードファイルはコンパイラである *Babel* によってコンパイルされ、それがバンドラである*webpack*によって適切な形にまとめられ、それらが相互に関連付けられる

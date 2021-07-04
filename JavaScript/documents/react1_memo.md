@@ -64,4 +64,29 @@ MVVMはRailsなどのMVCと近いので、Railsなどが人気な日本では採
 <b>関数</b>
 - JavaScriptにおける関数は第一級オブジェクトである
 - 他のオブジェクトと同様に、変数に代入したり、配列のプロパティ値にしたり、関数の引数に渡したりできる
-- 
+- 引数にRest Parametersを使える。残りの引数を配列として受け取れる。
+```
+const showNames = (a, b, ...rest) => {
+
+console.log(a);
+console.log(b);
+console.log(rest); // [rest1, rest2, rest3]
+};
+```
+- 第一引数にRest Parametersを設定した場合
+```
+const showAllArgs = (...args) => {
+console.log(args);
+};
+
+console.log(showAllArgs('A', 'B', 'C', 'D'));  // [ 'A', 'B', 'C', 'D' ]
+```
+- Rest Parametersに名前を付けたい場合
+```
+const sum = (i, ...[j, k, l]) => i + j + k + l;
+
+console.log(sum(1, 2, 3, 4));  // 10
+console.log(sum(1, 1, 1, 1, 1));  // 4
+```
+
+

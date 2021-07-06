@@ -90,4 +90,15 @@ console.log(sum(1, 1, 1, 1, 1));  // 4
 ```
 
 <b>プロトタイプベース</b>
-- JavaScriptはクラスベースではなく、プロトタイプベースのオブジェクト指向言語である。
+- ショートサーキット評価（short-circuit evaluation）
+- ||は左辺が falsy な値だと評価が右辺に渡 される。
+- &&は左辺が truthy な値のときに評価が右辺に渡される
+```
+const hello = undefined || null || 0 || NaN || '' || 'Hello!';
+const chao = ' ' && 100 && [] && {} && 'Chao!';
+
+true && console.log('1.', hello); // 1. Hello!
+false && console.log('2.', hello); // (no output)
+true || console.log('3.', chao); // (no output)
+false || console.log('4.', chao); // 4. Chao!
+```
